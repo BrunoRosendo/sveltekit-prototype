@@ -1,1 +1,62 @@
-<slot></slot>
+<script>
+    import TopAppBar, { Row, Section } from '@smui/top-app-bar';
+    import Button, { Label } from '@smui/button';
+</script>
+
+<TopAppBar
+        variant="static"
+        dense={true}
+        color="primary"
+>
+    <Row>
+        <Section>
+            <div class="navbar-button">
+                <Button>
+                    <Label>Equipa</Label>
+                </Button>
+            </div>
+            <div class="navbar-button">
+                <Button>
+                    <Label>Projetos</Label>
+                </Button>
+            </div>
+        </Section>
+        <Section align="center">
+            <img src="logo.png" alt="NI logo" />
+
+        </Section>
+        <Section align="end" toolbar>
+            <div class="navbar-button">
+                <Button>
+                    <Label>Eventos</Label>
+                </Button>
+            </div>
+            <div class="navbar-button">
+                <Button>
+                    <Label>Contactos</Label>
+                </Button>
+            </div>
+        </Section>
+    </Row>
+</TopAppBar>
+
+<div class="page-body">
+    <slot></slot>
+</div>
+
+<style>
+.page-body {
+    margin: 1vw 2vw 1vw 2vw;
+}
+
+.navbar-button {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+img {
+    height: 90%;
+    width: 100%;
+    object-fit: contain;
+}
+</style>
+
