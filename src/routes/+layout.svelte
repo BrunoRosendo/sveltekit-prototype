@@ -21,7 +21,7 @@
                 </Button>
             </div>
         </Section>
-        <Section align="center">
+        <Section>
             <img src="logo.png" alt="NI logo" />
 
         </Section>
@@ -47,6 +47,8 @@
 <style>
 .page-body {
     margin: 1vw 2vw 1vw 2vw;
+    display: flex;
+    color: white;
 }
 
 .navbar-button {
@@ -59,4 +61,6 @@ img {
     object-fit: contain;
 }
 </style>
+
+
 
