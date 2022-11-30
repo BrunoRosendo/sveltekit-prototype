@@ -19,7 +19,7 @@ main {
     position: relative;
 }
 .page-content {
-    margin: 1vw 2vw 1vw 2vw;
-    padding-bottom: 10vw;
+    margin: 1vw 2vw 0 2vw;
+    padding-bottom: 10vh;
 }
 </style>
