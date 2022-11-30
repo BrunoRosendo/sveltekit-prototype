@@ -23,11 +23,8 @@ body {
   margin: 0;
 }
 
-a {
-  color: #C04343;
-}
-a:visited {
-  color: color.scale(#C04343, $lightness: -35%);
+hr {
+  color: theme.$primary;
 }
 
 html {
