@@ -38,28 +38,11 @@
     </LayoutGrid>   
 </div>
 
-
-<div class="footer">
-    <div class="mdc-typography--body1">{"< Footer />"}</div>
-</div>
-
 <style>
     .main-page {
-        height: 100%;
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
-
-    .footer {
-        width: 100%;
-        display: flex;
-        bottom: 0;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px 0;
     }
 </style>

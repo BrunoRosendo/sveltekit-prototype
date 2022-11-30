@@ -6,14 +6,20 @@
 <Navbar/>
 
 <main>
-    <slot></slot>
+    <div class="page-content">
+        <slot></slot>
+    </div>
+    <Footer/>
 </main>
-
-<Footer/>
 
 <style>
 main {
-    margin: 1vw 2vw 1vw 2vw;
     color: white;
+    min-height: 100%;
+    position: relative;
+}
+.page-content {
+    margin: 1vw 2vw 1vw 2vw;
+    padding-bottom: 10vw;
 }
 </style>
