@@ -20,6 +20,6 @@ main {
 }
 .page-content {
     margin: 1vw 2vw 0 2vw;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
 }
 </style>

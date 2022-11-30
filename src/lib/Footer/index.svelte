@@ -2,26 +2,33 @@
 	import LayoutGrid, { Cell } from "@smui/layout-grid";
     import IconButton from '@smui/icon-button';
     import logo from "./logo.svg";
+    import github from "./github.png";
+    import instagram from "./instagram.png";
+    import twitter from "./twitter.png";
+    import linkedin from "./linkedin.png";
     import List, { Item, Text } from '@smui/list';
 </script>
 <div class="footer-wrapper">
     <hr class="footer-divider"/>
     <LayoutGrid style="padding-top: 1vh; padding-bottom: 0;">
         <Cell span={4}>
-            <IconButton class="material-icons">language</IconButton>
-            <IconButton class="material-icons">facebook</IconButton>
-            <!--TODO: Replace with social media logos, mui icons not available...-->
-            <IconButton>
-                <img src={logo} alt="NI logo" />
+            <IconButton class="material-icons" style="transform: scale(1.5); height: 70%;">
+                language
             </IconButton>
-            <IconButton>
-                <img src={logo} alt="NI logo" />
+            <IconButton class="material-icons" style="transform: scale(1.5); height: 70%;">
+                facebook
             </IconButton>
-            <IconButton>
-                <img src={logo} alt="NI logo" />
+            <IconButton style="transform: scale(1.2); height: 70%;">
+                <img src={github} alt="GitHub logo" />
             </IconButton>
-            <IconButton>
-                <img src={logo} alt="NI logo" />
+            <IconButton style="transform: scale(1.2); height: 70%;">
+                <img src={instagram} alt="Instagram logo" />
+            </IconButton>
+            <IconButton style="transform: scale(1.2); height: 70%;">
+                <img src={twitter} alt="Twitter logo" />
+            </IconButton>
+            <IconButton style="transform: scale(1.2); height: 70%;">
+                <img src={linkedin} alt="Linkedin logo" />
             </IconButton>
         </Cell>
         <Cell span={4}>
@@ -39,12 +46,13 @@
         <Cell span={4}>
             <div class="right-cell">
                 <List nonInteractive>
-                    <!--TODO: text not aligning end-->
                     <Item>
-                        <Text style="text-align: end;">Rua Dr. Roberto Frias 4200-465, Porto</Text>
+                        <Text>Rua Dr. Roberto Frias 4200-465, Porto</Text>
                     </Item>
                     <Item>
-                        <Text style="text-align: end;">Sala B315</Text>
+                        <div style="width: 100%; display: flex; justify-content: end">
+                        <Text>Sala B315</Text>
+                    </div>
                     </Item>
                 </List>
         </div>
@@ -61,7 +69,7 @@
     width: 95%;
     left: 2.5%;
     bottom: 0;
-    height: 5vh;
+    height: 0;
 }
 .footer-logo {
     height: 6vh;
