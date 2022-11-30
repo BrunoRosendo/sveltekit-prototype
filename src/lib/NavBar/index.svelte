@@ -23,7 +23,7 @@
             </div>
         </Section>
         <Section>
-            <img src={logo} alt="NI logo" />
+            <a href="/"><img src={logo} alt="NI logo" /></a>
 
         </Section>
         <Section align="end" toolbar>
@@ -46,7 +46,7 @@
     padding-left: 1vw;
     padding-right: 1vw;
 }
-img {
+img, a {
     height: 90%;
     width: 100%;
     object-fit: contain;

@@ -12,22 +12,22 @@
     <hr class="footer-divider"/>
     <LayoutGrid style="padding-top: 1vh; padding-bottom: 0;">
         <Cell span={4}>
-            <IconButton class="material-icons" style="transform: scale(1.5); height: 70%;">
+            <IconButton ripple={false} href="https://ni.fe.up.pt" target="_blank" class="material-icons" style="transform: scale(1.5); height: 70%;">
                 language
             </IconButton>
-            <IconButton class="material-icons" style="transform: scale(1.5); height: 70%;">
+            <IconButton ripple={false} href="https://facebook.com/NIAEFEUP/" target="_blank" class="material-icons" style="transform: scale(1.5); height: 70%;">
                 facebook
             </IconButton>
-            <IconButton style="transform: scale(1.2); height: 70%;">
+            <IconButton ripple={false} href="https://github.com/NIAEFEUP" target="_blank" style="transform: scale(1.2); height: 70%;">
                 <img src={github} alt="GitHub logo" />
             </IconButton>
-            <IconButton style="transform: scale(1.2); height: 70%;">
+            <IconButton ripple={false} href="https://www.instagram.com/niaefeup/" target="_blank" style="transform: scale(1.2); height: 70%;">
                 <img src={instagram} alt="Instagram logo" />
             </IconButton>
-            <IconButton style="transform: scale(1.2); height: 70%;">
+            <IconButton ripple={false} href="https://twitter.com/niaefeup" target="_blank" style="transform: scale(1.2); height: 70%;">
                 <img src={twitter} alt="Twitter logo" />
             </IconButton>
-            <IconButton style="transform: scale(1.2); height: 70%;">
+            <IconButton ripple={false} href="https://pt.linkedin.com/company/nifeup" target="_blank" style="transform: scale(1.2); height: 70%;">
                 <img src={linkedin} alt="Linkedin logo" />
             </IconButton>
         </Cell>
