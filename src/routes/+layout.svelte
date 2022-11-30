@@ -1,66 +1,19 @@
 <script>
-    import TopAppBar, { Row, Section } from '@smui/top-app-bar';
-    import Button, { Label } from '@smui/button';
+    import Navbar from "$lib/NavBar/index.svelte";
+    import Footer from "$lib/Footer/index.svelte";
 </script>
 
-<TopAppBar
-        variant="static"
-        dense={true}
-        color="primary"
->
-    <Row>
-        <Section>
-            <div class="navbar-button">
-                <Button>
-                    <Label>Equipa</Label>
-                </Button>
-            </div>
-            <div class="navbar-button">
-                <Button>
-                    <Label>Projetos</Label>
-                </Button>
-            </div>
-        </Section>
-        <Section>
-            <img src="logo.png" alt="NI logo" />
+<Navbar/>
 
-        </Section>
-        <Section align="end" toolbar>
-            <div class="navbar-button">
-                <Button>
-                    <Label>Eventos</Label>
-                </Button>
-            </div>
-            <div class="navbar-button">
-                <Button>
-                    <Label>Contactos</Label>
-                </Button>
-            </div>
-        </Section>
-    </Row>
-</TopAppBar>
-
-<div class="page-body">
+<main>
     <slot></slot>
-</div>
+</main>
+
+<Footer/>
 
 <style>
-.page-body {
+main {
     margin: 1vw 2vw 1vw 2vw;
-    display: flex;
     color: white;
 }
-
-.navbar-button {
-    padding-left: 1vw;
-    padding-right: 1vw;
-}
-img {
-    height: 90%;
-    width: 100%;
-    object-fit: contain;
-}
 </style>
-
-
-
