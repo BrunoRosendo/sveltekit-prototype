@@ -36,11 +36,10 @@ main {
 }
 .background-img{
     position: absolute;
-    width: 50%;
     height: 100%;
     z-index: 1;
     overflow: hidden;
-    left: 50%;
+    right: 0;
     top: 5%;
 }
 </style>
