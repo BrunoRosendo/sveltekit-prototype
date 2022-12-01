@@ -21,6 +21,9 @@ import ProjectCards from "$lib/ProjectCards/index.svelte";
         type: "Aplicação Mobile",
         imageURL: "https://play-lh.googleusercontent.com/947VgiC4ySPiJtqMxhTDP7XuZs4UTWDtVYBsergfzM4XTbLA7mS4Xrh2lksZ28bm4nrQ=w240-h480",
     };
+
+    const projects = [project1, project2, project3];
+
 </script>
 
 <div class = "main-page">
@@ -31,15 +34,11 @@ import ProjectCards from "$lib/ProjectCards/index.svelte";
     <div class="mdc-typography--headline3" style="margin: 2vw; margin-top: 4vw;font-size: 2.5rem">{"< Projetos Arquivados />"}</div>
 
     <LayoutGrid fixedColumnWidth>
+        {#each projects as project}
         <Cell span={4}>
-            <ArchivedProjectCard project = {project1} />
+            <ArchivedProjectCard project = {project} />
         </Cell>
-        <Cell span={4}>
-            <ArchivedProjectCard project = {project2} />        
-        </Cell>
-        <Cell span={4}>
-            <ArchivedProjectCard project = {project3} />        
-        </Cell>
+	    {/each}
     </LayoutGrid>   
 </div>
 

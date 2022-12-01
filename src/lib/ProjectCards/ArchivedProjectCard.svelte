@@ -17,7 +17,7 @@
         aspect-ratio: 1;
         width: 80%;
         border-radius: 2.5rem;
-        margin: 0 10% 0 10%;
+        margin: 0 10% 10% 10%;
     }
 
     .card-display:hover{
