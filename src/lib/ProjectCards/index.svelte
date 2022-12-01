@@ -1,6 +1,4 @@
 <script>
-// @ts-nocheck
-
 	import LayoutGrid, { Cell } from '@smui/layout-grid';
     import SmallProjectCard from './SmallProjectCard.svelte';
     import BigProjectCard from './BigProjectCard.svelte';
@@ -11,12 +9,18 @@
 <LayoutGrid fixedColumnWidth>
     <Cell span={8}>
         <div class="small-projects">
-            <SmallProjectCard project={project1} useLight={false} />
-            <SmallProjectCard project={project3} useLight={true} />
+            {#if project1}
+                <SmallProjectCard project={project1} useLight={false} />
+            {/if}
+            {#if project3}
+                <SmallProjectCard project={project3} useLight={true} />
+            {/if}
         </div>
     </Cell>
     <Cell span={4}>
-        <BigProjectCard project={project2} />
+        {#if project2}
+            <BigProjectCard project={project2} />
+        {/if}
     </Cell>
 </LayoutGrid>
 

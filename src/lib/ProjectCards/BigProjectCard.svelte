@@ -1,6 +1,4 @@
 <script>
-// @ts-nocheck
-
     export let project;
 </script>
 
@@ -30,5 +28,8 @@
     .project-image {
         filter: drop-shadow(0px 5px 11px rgba(60, 0, 0, 0.58));
         margin-bottom: 5rem;
+        min-height: 10rem;
+        max-height: 15rem;
+        max-width: 17rem;
     }
 </style>

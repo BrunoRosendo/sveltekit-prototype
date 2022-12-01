@@ -1,6 +1,4 @@
 <script>
-// @ts-nocheck
-
     export let project;
     export let useLight;
 </script>
@@ -23,6 +21,11 @@
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         width: 100%;
         backdrop-filter: blur(6px);
+        height: 18rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .card-dark {
@@ -37,9 +40,12 @@
         display: flex;
         justify-content: space-evenly;
         padding: 3rem 0 3rem 0;
+        width: 100%;
+        height: 100%;
     }
     .project-image {
-        height: 12rem;
+        max-height: 12rem;
+        max-width: 20rem;
         filter: drop-shadow(0px 5px 11px rgba(60, 0, 0, 0.58));
     }
     .small-card-text {
