@@ -1,0 +1,47 @@
+<script>
+// @ts-nocheck
+
+    export let project;
+    export let useLight;
+</script>
+
+<div class={"card-display " + (useLight ? "card-light" : "card-dark")}>
+    <div class="small-card-container">
+        <img src={project.imageURL} alt={project.name + " logo"} class="project-image" />
+        <div class="small-card-text">
+            <div class="mdc-typography--headline4">{project.description}</div>
+            <div class="mdc-typography--headline5">{project.type}</div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .card-display {
+        border: solid 1px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        width: 100%;
+    }
+    .card-dark {
+        background: linear-gradient(#1F0000, #9B1515);
+        border-color: #BF0808;
+    }
+    .card-light {
+        background: linear-gradient(#7E2C12, #FF4A31);
+        border-color: #FF5B27;
+    }
+    .small-card-container {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 3rem 0 3rem 0;
+    }
+    .project-image {
+        height: 12rem;
+        filter: drop-shadow(0px 5px 11px rgba(60, 0, 0, 0.58));
+    }
+    .small-card-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+</style>
