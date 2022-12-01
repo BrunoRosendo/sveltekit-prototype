@@ -6,6 +6,7 @@
 <Navbar/>
 
 <main>
+    <div class="gradient-background"></div>
     <div class="page-content">
         <slot></slot>
     </div>
@@ -19,7 +20,17 @@ main {
     position: relative;
 }
 .page-content {
-    margin: 1vw 2vw 0 2vw;
+    margin: 0 2vw 0 2vw;
     padding-bottom: 5vh;
+    position: relative;
+    z-index: 1;
+}
+.gradient-background {
+    background: linear-gradient(#831f20, #411315);
+    height: 25%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
 }
 </style>
