@@ -18,9 +18,11 @@
         width: 80%;
         border-radius: 2.5rem;
         margin: 0 10% 10% 10%;
+        backdrop-filter: blur(6px)
     }
 
     .card-display:hover{
+        border: 1px solid rgba(188, 12, 12, 1);
         background: linear-gradient(rgba(179, 54, 54, 0.25),rgba(113, 3, 3, 0.25));
         transition: .2s;
     }

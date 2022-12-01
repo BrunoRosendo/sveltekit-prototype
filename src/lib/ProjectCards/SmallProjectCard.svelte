@@ -18,9 +18,11 @@
 
 <style>
     .card-display {
+        border-radius: 0.5rem;
         border: solid 1px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         width: 100%;
+        backdrop-filter: blur(6px);
     }
 
     .card-dark {
