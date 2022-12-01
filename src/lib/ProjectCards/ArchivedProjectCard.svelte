@@ -13,6 +13,7 @@
 <style>
     .card-display {
         background-color: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(188, 12, 12, 0);
         aspect-ratio: 1;
         width: 80%;
         border-radius: 2.5rem;
