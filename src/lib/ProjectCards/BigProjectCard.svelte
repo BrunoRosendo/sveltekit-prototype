@@ -19,7 +19,7 @@
         border: solid 1px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         width: 100%;
-        background: linear-gradient(#DA7F62, #75171E);
+        background: linear-gradient(rgba(255, 67, 67, 0.4), rgba(117, 23, 30, 0.4));
         border-color: #FB3232;
     }
     .card-wrapper {

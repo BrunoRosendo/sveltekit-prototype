@@ -22,12 +22,13 @@
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         width: 100%;
     }
+
     .card-dark {
-        background: linear-gradient(#1F0000, #9B1515);
+        background: linear-gradient(rgba(31, 0, 0, 0.5), rgba(155, 21, 21, 0.5));
         border-color: #BF0808;
     }
     .card-light {
-        background: linear-gradient(#7E2C12, #FF4A31);
+        background: linear-gradient(rgba(126, 44, 18, 0.5), rgba(255, 74, 49, 0.5));
         border-color: #FF5B27;
     }
     .small-card-container {
