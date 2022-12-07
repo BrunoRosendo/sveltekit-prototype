@@ -1,66 +1,45 @@
 <script>
-    import TopAppBar, { Row, Section } from '@smui/top-app-bar';
-    import Button, { Label } from '@smui/button';
+	import Navbar from '$lib/NavBar/index.svelte';
+	import Footer from '$lib/Footer/index.svelte';
 </script>
 
-<TopAppBar
-        variant="static"
-        dense={true}
-        color="primary"
->
-    <Row>
-        <Section>
-            <div class="navbar-button">
-                <Button>
-                    <Label>Equipa</Label>
-                </Button>
-            </div>
-            <div class="navbar-button">
-                <Button>
-                    <Label>Projetos</Label>
-                </Button>
-            </div>
-        </Section>
-        <Section>
-            <img src="logo.png" alt="NI logo" />
+<Navbar />
 
-        </Section>
-        <Section align="end" toolbar>
-            <div class="navbar-button">
-                <Button>
-                    <Label>Eventos</Label>
-                </Button>
-            </div>
-            <div class="navbar-button">
-                <Button>
-                    <Label>Contactos</Label>
-                </Button>
-            </div>
-        </Section>
-    </Row>
-</TopAppBar>
-
-<div class="page-body">
-    <slot></slot>
-</div>
+<main>
+	<img class="background-img" src="background.png" alt="background" />
+	<div class="gradient-background" />
+	<div class="page-content">
+		<slot />
+	</div>
+	<Footer />
+</main>
 
 <style>
-.page-body {
-    margin: 1vw 2vw 1vw 2vw;
-    display: flex;
+main {
     color: white;
+    min-height: 100%;
+    position: relative;
 }
-
-.navbar-button {
-    padding-left: 1vw;
-    padding-right: 1vw;
+.page-content {
+    margin: 0 2vw 0 2vw;
+    padding-bottom: 5vh;
+    position: relative;
+    z-index: 2;
 }
-img {
-    height: 90%;
+.gradient-background {
+    background: linear-gradient(#831f20, #411315);
+    height: 25%;
+    left: 0;
+    top: 0;
+    position: absolute;
     width: 100%;
-    object-fit: contain;
 }
+.background-img {
+    position: fixed;
+    width: 40%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    left: 60%;
+	}
 </style>
-
-
-
