@@ -1,9 +1,20 @@
 <script>
     export let project;
     export let useLight;
+
+    const archiveProject = async () => {
+        await fetch(`https://parseapi.back4app.com/functions/archiveProject?id=${project.objectId}`, {
+            method: "POST",
+            headers: {
+                "X-Parse-Application-Id": "yB953MbsVE0hvNYJLy9Udleb7uF0bwB4AWDoAuD9",
+                "X-Parse-REST-API-Key": "3TA8ugnSSIN1TB8tQNDGTudYk00i9dghfwloy84c"
+            }
+        });
+    }
 </script>
 
-<div class={"card-display " + (useLight ? "card-light" : "card-dark")}>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class={"card-display " + (useLight ? "card-light" : "card-dark")} on:click={archiveProject}>
     <div class="small-card-container">
         <img src={project.imageURL} alt={project.name + " logo"} class="project-image" />
         <div class="small-card-text">
