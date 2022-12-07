@@ -1,18 +1,17 @@
 <script>
+    import {archiveProject, loadProjects} from "$lib/requests.js";
+    import {projects} from "$lib/stores.js";
+
     export let project;
 
-    const archiveProject = async () => {
-        await fetch(`https://parseapi.back4app.com/functions/archiveProject?id=${project.objectId}`, {
-            method: "POST",
-            headers: {
-                "X-Parse-Application-Id": "yB953MbsVE0hvNYJLy9Udleb7uF0bwB4AWDoAuD9",
-                "X-Parse-REST-API-Key": "3TA8ugnSSIN1TB8tQNDGTudYk00i9dghfwloy84c"
-            }
-        });
+    const archiveAndReload = async () => {
+        await archiveProject(project.objectId);
+        projects.set(await loadProjects());
     }
 </script>
 
-<div class="card-display" on:click={archiveProject}>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="card-display" on:click={archiveAndReload}>
     <div class="card-wrapper">
         <div>
             <img src={project.imageURL} alt={project.name + " logo"} class="project-image" />

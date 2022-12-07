@@ -2,15 +2,19 @@
 	import ArchivedProjectCard from "$lib/ProjectCards/ArchivedProjectCard.svelte";
     import ProjectCards from "$lib/ProjectCards/index.svelte";
     import LayoutGrid, { Cell } from '@smui/layout-grid';
+    import {projects} from "$lib/stores.js";
 
-    export let data;
+    $: data = $projects.results;
+    let groupedProjects = [];
 
-    const activeProjects = data.projects.filter(project => !project.isArchived);
-    const groupedProjects = [];
-    for (let i = 0; i < activeProjects.length; i += 3)
-        groupedProjects.push(activeProjects.slice(i, i + 3));
+    $: activeProjects = data.filter(project => !project.isArchived);
+    $: {
+        groupedProjects = [];
+        for (let i = 0; i < activeProjects.length; i += 3)
+            groupedProjects.push(activeProjects.slice(i, i + 3));
+    }
 
-    const archivedProjects = data.projects.filter(project => project.isArchived);
+    $: archivedProjects = data.filter(project => project.isArchived);
 
 </script>
 

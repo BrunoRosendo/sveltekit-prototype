@@ -1,19 +1,17 @@
 <script>
+    import {unarchiveProject, loadProjects} from "$lib/requests.js";
+    import {projects} from "$lib/stores.js";
+
     export let project;
 
-    const unarchiveProject = async () => {
-        await fetch(`https://parseapi.back4app.com/functions/unarchiveProject?id=${project.objectId}`, {
-            method: "POST",
-            headers: {
-                "X-Parse-Application-Id": "yB953MbsVE0hvNYJLy9Udleb7uF0bwB4AWDoAuD9",
-                "X-Parse-REST-API-Key": "3TA8ugnSSIN1TB8tQNDGTudYk00i9dghfwloy84c"
-            }
-        });
+    const unarchiveAndReload = async () => {
+        await unarchiveProject(project.objectId);
+        projects.set(await loadProjects());
     }
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="card-display" on:click={unarchiveProject}>
+<div class="card-display" on:click={unarchiveAndReload}>
     <div class="small-card-text">
         <div class="mdc-typography--headline4">{project.name}</div>
         <div class="mdc-typography--headline5">{project.type}</div>
