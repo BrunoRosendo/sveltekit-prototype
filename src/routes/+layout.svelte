@@ -1,17 +1,17 @@
 <script>
-    import Navbar from "$lib/NavBar/index.svelte";
-    import Footer from "$lib/Footer/index.svelte";
+	import Navbar from '$lib/NavBar/index.svelte';
+	import Footer from '$lib/Footer/index.svelte';
 </script>
 
-<Navbar/>
+<Navbar />
 
 <main>
-    <img class="background-img" src="background.png" alt = "background">
-    <div class="gradient-background"></div>
-    <div class="page-content">
-        <slot></slot>
-    </div>
-    <Footer/>
+	<img class="background-img" src="background.png" alt="background" />
+	<div class="gradient-background" />
+	<div class="page-content">
+		<slot />
+	</div>
+	<Footer />
 </main>
 
 <style>
@@ -34,12 +34,12 @@ main {
     position: absolute;
     width: 100%;
 }
-.background-img{
-    position: absolute;
+.background-img {
+    position: fixed;
+    width: 40%;
     height: 100%;
     z-index: 1;
     overflow: hidden;
-    right: 0;
-    top: 5%;
-}
+    left: 60%;
+	}
 </style>
